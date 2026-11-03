@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idea Garden</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+ 
+</head>
+
+<body>
+  <header>
+    <h1>Simple Pinterest for Little Kids</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>What are you plans today? What will you make?</h2>
+      <p>Big ideas start with a little imagination and having creativity! Pick an activity, use many colors, and make it your own!</p>
+      <button class="surprise-button" id="surprise">
+        Get a suprise activity! 
+      </button>
+    </section>
+
+    <nav class="filters" aria-label="Activity categories">
+      <button class="active" data-filter="all" aria-pressed="true">All</button>
+      <button data-filter="art" aria-pressed="false">Art</button>
+      <button data-filter="crafts" aria-pressed="false">Crafts</button>
+      <button data-filter="building" aria-pressed="false"> Building</button>
+      <button data-filter="writing" aria-pressed="false"> Writing</button>
+    </nav>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section class="idea-grid" aria-label="Creative activities">
+      <article class="card" data-category="art">
+        <div class="card-picture pink" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Art</span>
+          <h3>Invent a New Animal</h3>
+          <p>Combine two animals into one new creature. Draw it with many colors and give it a funny name!</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="crafts">
+        <div class="card-picture yellow" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Crafts</span>
+          <h3>Paper Flower Garden</h3>
+          <p>Fold colorful paper into flowers. Arrange them on a page to create your own garden.</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="building">
+        <div class="card-picture blue" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Building</span>
+          <h3>Build a Small and Unique Town!</h3>
+          <p>Use small cardboard boxes to make houses (cutting square cutouts in each box to make windows), shops, and a school. Add paper roads, coloring them grey.</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="writing">
+        <div class="card-picture purple" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Writing</span>
+          <h3>The Secret Door</h3>
+          <p>You find a tiny door behind your bookshelf or even behind a tree. Write a story about what is on the other side and what you will do.</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="art">
+        <div class="card-picture green" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Art</span>
+          <h3>Nature Rubbings</h3>
+          <p>Place a leaf under a sheet of paper. Gently rub a crayon (using it sideways) over it to reveal its pattern.</p>
+        </div>
+      </article>
+      
+
+      <article class="card" data-category="crafts">
+        <div class="card-picture peach" aria-hidden="true"></div>
+        <div class="card-text">
+          <span class="category">Crafts</span>
+          <h3>Create a Paper Crown</h3>
+          <p>Cut out paper strips from colored paper and decorate a paper strip with drawings and stickers. Ask an adult to help fit it into a crown using a stapler.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+<dialog id="instructions" aria-labelledby="activity-title">
+  <h2 id="activity-title"></h2>
+  <p id="activity-materials"></p>
+  <ol id="activity-steps"></ol>
+
+  <form method="dialog">
+    <button>Close</button>
+  </form>
+</dialog>
+  <footer>
+    I hope this gives you inspiration! Brennan Barr
+  </footer>
+</body>
+</html>
